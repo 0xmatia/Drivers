@@ -2,7 +2,14 @@
     Declarations - Here will reside all relevant functions declarations
 */
 extern "C" {
+    VOID DeviceUnload(
+            _In_ PDRIVER_OBJECT DriverObject
+    );
 
+    NTSTATUS DriverEntry(
+        _In_ PDRIVER_OBJECT  DriverObject,
+        _In_ PUNICODE_STRING RegistryPath
+    );
 }
 /* 
     alloc_text - This pragma names each funcions' text section residience.
